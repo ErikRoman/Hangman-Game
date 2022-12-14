@@ -1,9 +1,9 @@
 const path = require('path')
 
 module.exports = {
-    entry: ['babel-polyfill', './src/index.js'], //This is a path (relative path) to the place where the code lives 
+    entry: ['babel-polyfill', './Source/index.js'],
     output: {
-        path: path.resolve(__dirname, 'public/scripts'), //This contains the path (absolute path) to where we want to save the webpack output,
+        path: path.resolve(__dirname, 'Public/Scripts'),
         filename: 'bundle.js'
     },
     module: {
@@ -14,14 +14,13 @@ module.exports = {
                 loader: 'babel-loader',
                 options: {
                     presets: ['env'],
-                    plugins: ['transform-object-rest-spread']
                 }
             }
         }]
     },
     devServer: {
-        contentBase: path.resolve( __dirname, 'public' ),
-        publicPath: '/scripts/'
+        contentBase: path.resolve( __dirname, 'Public' ),
+        publicPath: '/Scripts/'
     },
     devtool: 'source-map'
 }
