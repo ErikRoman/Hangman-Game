@@ -2,7 +2,7 @@ import Hangman from './hangman-functions.js'
 import getPuzzle from './requests.js'
 
 
-// RENDER THE PUZZLE AND THE GUESSES LEFT TO THE BROWSER
+// Render the puzle and the guesses left to the browser
 const puzzleEl = document.querySelector( '#puzzle' )
 const guessesEl = document.querySelector( '#guesses' )
 let game1
@@ -10,7 +10,6 @@ let game1
 
 window.addEventListener( 'keypress', ( event ) => {
     const guessFromKeyPress = String.fromCharCode( event.charCode )
-    // This event only fires when someone presses a key
     game1.makeGuess( guessFromKeyPress ) 
     render()
 } )
